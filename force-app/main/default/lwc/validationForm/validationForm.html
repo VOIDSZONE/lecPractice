@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Product Form Validation">
+        <div class="slds-p-around_medium">
+            <lightning-input 
+                label="Product Name" 
+                name="productName" 
+                value={productName} 
+                onchange={handleChange}>
+            </lightning-input>
+
+            <lightning-input 
+                type="number" 
+                label="Product Number" 
+                name="productNumber" 
+                value={productNumber} 
+                onchange={handleChange}>
+            </lightning-input>
+
+            <lightning-combobox 
+                label="Product Type" 
+                name="productType" 
+                value={productType} 
+                options={productTypeOptions} 
+                onchange={handleChange}>
+            </lightning-combobox>
+
+            <lightning-button 
+                label="Validate" 
+                variant="brand" 
+                class="slds-m-top_medium" 
+                onclick={validateForm}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>
